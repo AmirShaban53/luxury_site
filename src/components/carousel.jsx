@@ -15,20 +15,28 @@ const Carousel = () => {
     setActiveImg((prev) => prev + 1);
   };
 
-  // useEffect(() => {
-  //   if (activeImg >= images.length) setActiveImg(0);
-  // }, [activeImg]);
-  // useEffect(() => {
-  //   tracker.current = setInterval(() => {
-  //     handleChangeImg();
-  //   }, 2000);
-  //   return () => clearInterval(tracker.current);
-  // }, []);
+  const handleSetActiveImg = (index) => {
+    clearInterval(tracker.current);
+    setActiveImg(index);
+    tracker.current = setInterval(() => {
+      handleChangeImg();
+    }, 4000);
+  };
+
+  useEffect(() => {
+    if (activeImg >= images.length) setActiveImg(0);
+  }, [activeImg]);
+  useEffect(() => {
+    tracker.current = setInterval(() => {
+      handleChangeImg();
+    }, 4000);
+    return () => clearInterval(tracker.current);
+  }, []);
 
   return (
     <div className="h-screen w-full relative overflow-hidden">
       <div
-        className="flex absolute duration-300 transition-all ease-in-out"
+        className="flex absolute duration-1000 transition-all ease-in-out"
         style={{
           transform: `translateX(-${
             activeImg === images.length - 1
@@ -49,10 +57,18 @@ const Carousel = () => {
         {images.map((img, index) => {
           const active = activeImg === index;
           return (
-            <span
+            <button
+              type="button"
               key={index}
-              className={`inline-block ${active ? "bg-white": "bg-zinc-200/50"} h-[0.2rem] w-24 rounded-full`}
-            ></span>
+              onClick={() => handleSetActiveImg(index)}
+              className=""
+            >
+              <span
+                className={`inline-block ${
+                  active ? "bg-white" : "bg-zinc-200/50"
+                } h-[0.2rem] w-24 rounded-full cursor-pointer`}
+              ></span>
+            </button>
           );
         })}
       </div>
@@ -62,4 +78,4 @@ const Carousel = () => {
 
 export default Carousel;
 
-const images = ["/jessica.jpg", "/afro.jpg", "/sis.jpg", "/farmer.jpg"];
+const images = ["/hero/fashion.webp", "/hero/twins.webp", "/hero/travel.webp", "/hero/jessica.webp"];
