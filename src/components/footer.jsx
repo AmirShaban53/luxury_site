@@ -3,7 +3,7 @@ import { Container } from "./layout";
 
 const Footer = () => {
   return (
-    <div className="py-8 border-t mt-4">
+    <div className="py-8 border-t ">
       <Container>
         <div className="flex justify-between">
           <div>
