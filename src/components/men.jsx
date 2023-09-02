@@ -3,7 +3,7 @@ import { Container } from "./layout";
 
 const Men = () => {
   return (
-    <div className="py-24">
+    <div className="py-24" id="men">
       <Container>
         <div className="md:w-1/2 mx-auto text-center mb-12">
           <p className="mb-6 uppercase font-semibold text-lg tracking-tight">
@@ -15,18 +15,28 @@ const Men = () => {
             through this digital flagship.
           </p>
         </div>
-        <div className="grid grid-cols-12 gap-12 mb-12">
-          <div className="col-span-4 col-start-3">
+        <div className="grid grid-cols-12 gap-6 md:gap-12 mb-12">
+          <div className="col-span-8 col-start-3 md:col-span-4 md:col-start-3">
             <img
               src="/resized/mens/browns.webp"
               className="w-full aspect-[3/4] object-cover"
+              alt="man wearing an overcoat"
             />
+            <div className="flex justify-between text-sm mt-1 tracking-tight">
+              <p className="font-semibold">Overcoat</p>
+              <p className="font-light text-neutral-500">$ 299.00</p>
+            </div>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-8 col-start-3 md:col-span-4 md:col-start-7">
             <img
               src="/resized/mens/hoodie.webp"
               className="w-full aspect-[3/4] object-cover"
+              alt="man in a white hoodie"
             />
+            <div className="flex justify-between text-sm mt-1 tracking-tight">
+              <p className="font-semibold">White Hoodie</p>
+              <p className="font-light text-neutral-500">$ 159.00</p>
+            </div>
           </div>
         </div>
         <div className="text-center ">

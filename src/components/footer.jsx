@@ -7,26 +7,28 @@ const Footer = () => {
       <Container>
         <div className="flex justify-between">
           <div>
-            <p>@tomasthan</p>
+            <a href="/#" className="font-semibold text-xl font-noto">
+              @B <span className="text-xl">&</span> A
+            </a>
           </div>
           <div>
-            <ul className="flex gap-6">
+            <ul className="md:flex gap-6 hidden">
               <li>
-                <a href="">Contact us</a>
+                <a href="/#women">Women</a>
               </li>
               <li>
-                <a href="">FAQ</a>
+                <a href="/#men">Men</a>
               </li>
               <li>
-                <a href="">Terms and Conditions</a>
+                <a href="/#about">About</a>
               </li>
               <li>
-                <a href="">Credits</a>
+                <a href="/">Terms and Conditions</a>
               </li>
             </ul>
           </div>
           <div>
-            <p>North America</p>
+            <p className="font-noto">North America</p>
           </div>
         </div>
       </Container>

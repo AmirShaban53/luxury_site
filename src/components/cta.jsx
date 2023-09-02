@@ -1,40 +1,60 @@
-import React from "react";
+import { useRef } from "react";
 import { ContainerFluid } from "./layout";
+import PanImage from "./panImage";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Cta = () => {
+  const img1Ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: img1Ref,
+    offset: ["start end", "end start"],
+  });
+  const position = useTransform(
+    scrollYProgress,
+    [0.15, 0.5, 1],
+    ["100%", "50%", "0%"]
+  );
   return (
     <div>
       <ContainerFluid>
         <div>
-          <div className="h-[85vh]">
+          <div className="h-[50vh] md:h-[85vh] relative" ref={img1Ref}>
             <img
               src="resized/hero/fashion.webp"
+              alt="man in a style overcoat"
               className="object-center w-full h-full object-cover"
             />
+            <motion.div
+              className="absolute bottom-6 uppercase text-white text-2xl md:text-7xl"
+              style={{
+                left: position,
+              }}
+            >
+              <p className="whitespace-nowrap font-noto">
+                Explore your own style.
+              </p>
+            </motion.div>
           </div>
-          <div className="flex">
-            <div className="basis-1/2 w-full aspect-square">
-              <img
-                src="/resized/carlos.webp"
-                className="h-full w-full object-cover"
-              />
+          <div className="grid grid-cols-12" id="glasses">
+            <div className="col-span-12 md:col-span-6 aspect-square">
+              <PanImage src={"/resized/carlos.webp"} />
             </div>
-            <div className="basis-1/2 flex justify-center items-center p-28 bg-neutral-200">
+            <div className="col-span-12 md:col-span-6 aspect-square p-8 md:p-28 bg-neutral-100">
               <div className="relative h-full">
                 <div className="absolute  text-center left-1/2 -translate-x-1/2 bottom-16 font-semibold">
-                  <p className="mb-8">N.52 .26 BAG</p>
+                  
                   <div className="mb-8">
-                    <p>A TIMELESS BAG</p>
-                    <p>DESIGNED TO ETERNITY</p>
+                    <p>Minimal Framed</p>
+                    <p>Eyeglasses</p>
                   </div>
                   <div>
-                    <button type="button">Shop</button>
+                    <button type="button" className="underline underline-offset-8">Shop</button>
                   </div>
                 </div>
                 <img
                   src="/resized/eyeglasses.webp"
                   className="h-full w-full object-cover mx-auto"
-                  alt="this is a simple image"
+                  alt="minimal eyeglasses"
                 />
               </div>
             </div>

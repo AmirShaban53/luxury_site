@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .d {
   border: 1px solid red;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 0.5rem;
 }
