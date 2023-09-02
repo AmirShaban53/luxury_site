@@ -14,6 +14,9 @@ const NavBar = () => {
   const handleToggleMenu = () => {
     setMobileOpen((prev) => !prev);
   };
+  const handleCloseMenu = () => {
+    setMobileOpen(false);
+  };
 
   return (
     <nav className="absolute pt-4 md:pt-8 z-20 text-white w-full">
@@ -38,19 +41,19 @@ const NavBar = () => {
           >
             <ul className=" md:flex items-center gap-8 w-full space-y-12 md:space-y-0 text-center md:w-auto">
               <li>
-                <a href="/#fashion">Fashion</a>
+                <a href="/#fashion" onClick={handleCloseMenu}>Fashion</a>
               </li>
               <li>
-                <a href="/#women">Collection</a>
+                <a href="/#women" onClick={handleCloseMenu}>Collection</a>
               </li>
               <li>
-                <a href="/#glasses">Eyeglasses</a>
+                <a href="/#glasses" onClick={handleCloseMenu}>Eyeglasses</a>
               </li>
               <li>
-                <a href="/#skin">Make Up</a>
+                <a href="/#skin" onClick={handleCloseMenu}>Make Up</a>
               </li>
               <li className="md:hidden">
-                <a href="/#about">About</a>
+                <a href="/#about" onClick={handleCloseMenu}>About</a>
               </li>
               <li className="md:hidden">
                 <div className="space-x-6">
