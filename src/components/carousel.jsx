@@ -91,7 +91,7 @@ const images = [
   { img: "resized/hero/fashion.webp", title: "style" },
   { img: "resized/hero/twins.webp", title: "fashion" },
   { img: "resized/hero/travel.webp", title: "travel" },
-  { img: "resized/hero/jessica.webp", title: "bueaty" },
+  { img: "resized/hero/jessica.webp", title: "beauty" },
 ];
 
 const AnimateTitle = ({ title }) => {
