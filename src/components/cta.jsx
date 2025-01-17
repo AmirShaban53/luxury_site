@@ -18,7 +18,7 @@ const Cta = () => {
     <div>
       <ContainerFluid>
         <div>
-          <div className="h-[50vh] md:h-[85vh] relative" ref={img1Ref}>
+          <div className="h-[50vh] md:h-[85vh] 2xl:h-[50vh] relative" ref={img1Ref}>
             <img
               src="resized/hero/fashion.webp"
               alt="man in a style overcoat"
@@ -36,10 +36,10 @@ const Cta = () => {
             </motion.div>
           </div>
           <div className="grid grid-cols-12" id="glasses">
-            <div className="col-span-12 md:col-span-6 aspect-square">
+            <div className="col-span-12 md:col-span-6 aspect-square 2xl:aspect-[8/7]">
               <PanImage src={"/resized/carlos.webp"} />
             </div>
-            <div className="col-span-12 md:col-span-6 aspect-square p-8 md:p-28 bg-neutral-100">
+            <div className="col-span-12 md:col-span-6 aspect-square 2xl:aspect-[8/7] p-8 lg:p-28 bg-neutral-100">
               <div className="relative h-full">
                 <div className="absolute  text-center left-1/2 -translate-x-1/2 bottom-16 font-semibold">
                   

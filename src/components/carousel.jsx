@@ -24,25 +24,25 @@ const Carousel = () => {
   useEffect(() => {
     tracker.current = setInterval(() => {
       handleChangeImg();
-    }, 4000);
+    }, 10000);
     return () => clearInterval(tracker.current);
   }, []);
 
   return (
-    <div className="h-screen w-full relative overflow-hidden">
+    <div className="h-screen 2xl:h-[70vh] w-full relative overflow-hidden">
       <div
-        className="flex absolute duration-1000 transition-all ease-in-out h-full"
+        className="flex absolute duration-1000 transition-all ease-in-out h-full "
         style={{
           transform: `translateX(-${
             activeImg === images.length - 1
-              ? activeImg * 85 - 15
-              : activeImg * 85
+              ? activeImg * 90-10
+              : activeImg * 90
           }%)`,
         }}
       >
         {images.map((image, index) => {
           return (
-            <div key={index} className="w-[85%] h-full shrink-0">
+            <div key={index} className="w-[90%] h-full shrink-0">
               <img
                 src={image.img}
                 alt="hero landing image"

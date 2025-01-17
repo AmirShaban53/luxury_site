@@ -6,11 +6,11 @@ const Features = () => {
     <div className="bg-neutral-200">
       <ContainerFluid>
         <div className="grid grid-cols-12" id="fashion">
-          <div className="col-span-12 md:col-span-6 aspect-square">
+          <div className="col-span-12 md:col-span-6 aspect-square 2xl:aspect-[8/7]">
             <PanImage src={"/resized/features/mohamad.webp"} />
           </div>
-          <div className="col-span-12 md:col-span-6 aspect-square p-8 md:p-28">
-            <div className="relative h-full ">
+          <div className="col-span-12 md:col-span-6 aspect-square 2xl:aspect-[8/7] p-8 lg:p-28">
+            <div className="relative h-full overflow-hidden">
               <div className="absolute text-center left-1/2 -translate-x-1/2 bottom-16 font-semibold ">
                 <div className="mb-8">
                   <p>A TIMELESS SWEATER</p>
@@ -28,7 +28,7 @@ const Features = () => {
               <div className="">
                 <img
                   src="/resized/sweater.webp"
-                  className="h-full w-full object-cover mx-auto -"
+                  className="h-full w-full object-cover mx-auto "
                   alt="kneated sweater"
                 />
               </div>
@@ -36,7 +36,7 @@ const Features = () => {
           </div>
         </div>
         <div className="grid grid-cols-12" id="about">
-          <div className="col-span-12 md:col-span-6 aspect-square p-8 md:p-20 flex gap-12 flex-col">
+          <div className="col-span-12 md:col-span-6 aspect-square 2xl:aspect-[8/7] p-8 lg:p-20 space-y-8">
             <div className="flex gap-2 grow">
               <div className="basis-1/2">
                 <img
@@ -63,7 +63,7 @@ const Features = () => {
               <p className="uppercase font-semibold text-lg tracking-tight">
                 Who are we?
               </p>
-              <p className="tracking-tight text-neutral-600">
+              <p className="tracking-tight text-neutral-600 line-clamp-3">
                 B<span className="text-sm">&</span>A [Brooke & Andres] is a
                 place for you to explore and discover your style. Find unquie
                 clothes and skincare products that you won't find elsewhere.
@@ -78,7 +78,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-6 aspect-square relative">
+          <div className="col-span-12 md:col-span-6 aspect-square 2xl:aspect-[8/7] h-full md relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
               <p className="uppercase font-semibold text-2xl font-noto tracking-[0.3rem]">
                 Brooke <span className="text-base">&</span> Andres
@@ -88,10 +88,10 @@ const Features = () => {
           </div>
         </div>
         <div className="grid grid-cols-12" id="skin">
-          <div className="col-span-12 md:col-span-6 aspect-square ">
+          <div className="col-span-12 order-2 md:order-1 md:col-span-6 aspect-square 2xl:aspect-[8/7] ">
             <PanImage src={"/resized/features/skin.webp"} />
           </div>
-          <div className="col-span-12 md:col-span-6 aspect-square p-8 md:p-28">
+          <div className="col-span-12 order-1 md:order-2 md:col-span-6 aspect-square 2xl:aspect-[8/7] p-8 lg:p-28">
             <div className="relative h-full">
               <div className="absolute  font-semibold text-neutral-50 text-center left-1/2 -translate-x-1/2 bottom-8 space-y-6">
                 <div>
@@ -99,7 +99,12 @@ const Features = () => {
                   <p>DESIGNED TO ETERNITY</p>
                 </div>
                 <div>
-                  <button type="button" className="underline underline-offset-8">Shop</button>
+                  <button
+                    type="button"
+                    className="underline underline-offset-8"
+                  >
+                    Shop
+                  </button>
                 </div>
               </div>
               <img
